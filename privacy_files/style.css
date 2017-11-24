@@ -1,0 +1,603 @@
+/*-------------------------
+	Simple reset
+--------------------------*/
+
+
+*{
+	margin:0;
+	padding:0;
+}
+
+
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+height:100%;
+min-height:100%;
+width:100%;
+}
+
+body{
+height: 100%;
+min-height:100%;
+width:100%;
+position: relative;
+background-image: url('img/space_dn2.png');
+background-size: cover;
+background-color: rgb(0, 0, 0);
+background-repeat:repeat no-repeat;
+}
+
+.section{
+    min-width:960px;
+    text-align: center;
+}
+
+.redContainer{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height:2586px;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.red, .red_1, .red_2{
+  display: block;
+  position: absolute;
+  width: 122px;
+  height: 120px;
+  background-image: url('img/red.png');
+  background-size: cover;
+}
+
+.red{
+  width: 100px;
+  height: 102px;
+}
+
+.red_1{
+  width: 110px;
+  height: 112px;
+}
+
+.section.head{
+    height:100%;
+}
+
+.section.head .container{
+    height:100%;
+}
+
+h1,h2,h3{
+    color:#f6f7fa;
+    font-family: "CaviarDreams";
+}
+
+.head h1{
+    padding-top: 90px;
+    font-size: 110px;
+}
+
+.head .privacy h1{
+    font-size: 48px;
+}
+
+.head .privacy p
+{
+    font-size: 16px;
+    color:#fff;
+}
+
+.head h2{
+    font-size: 30px;
+}
+
+.head h3{
+    margin-bottom: 35px;
+    font-size: 36px;
+}
+
+.head a
+{
+    position: relative;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.head .privacy a{
+    display: block;
+}
+
+.head .storebutton
+{
+    margin: 0 65px;
+    -webkit-filter: grayscale(20%); /* Chrome, Safari, Opera */
+    filter: grayscale(20%);
+}
+
+ #headGreen{
+    position: absolute;
+    height: 245px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+#headGreen .body
+{
+    position: relative;
+    margin: 0 auto;
+    height: 414px;
+    width: 484px;
+    background-image: url(img/green.png);
+    transform: scale(0.5);
+}
+
+#headGreen .lens
+{
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    background-image: url(img/green.png);
+    height: 195px;
+    width: 298px;
+    background-position: 298px 0;
+    z-index: 5;
+}
+
+#headGreen .eyeCont{
+    position: absolute;
+    height: 36px;
+    width: 36px;
+}
+
+#headGreen .eyeCont.l{
+    top: 46%;
+    left: 34%;
+}
+
+#headGreen .eyeCont.r
+{    
+    top: 46%;
+    right: 31%;
+}
+
+#headGreen .eye
+{
+    position: absolute;
+    background-image: url(img/green.png);
+    height: 36px;
+    width: 36px;
+    background-position: 0 36px;
+}
+
+.container.trailer
+{
+    overflow: hidden;
+}
+
+.section.description{
+    margin-top:100px;
+    text-align: center;
+    font-family: "CaviarDreams";    
+    font-size: 3.4rem;
+    color:#fff;
+}
+
+ .section.screenshots{
+     /*height:500px;*/
+     margin: 100px 0;    
+ }
+ 
+.trailerWrapper
+{
+    margin: 0 auto;
+    width: 260px;
+    height: 530px;
+    background-image: url('img/phoneFrameW.png');
+    background-size: contain;
+    /*padding: 12.5% 6.66% 11.2% 6.66%;*/
+    background-repeat: no-repeat;
+}
+
+.trailerWrapper iframe
+{
+     padding: 25.5% 3.66% 6.2% 3.66%;
+}
+
+.ast{
+    position: absolute;
+    width:112px;
+    height: 112px;
+    background-repeat: no-repeat;
+}
+
+.ast.ast1
+{
+    top:80px;
+    left: 0px;
+    background-image: url('img/ast1.png');
+    animation:rotate 20s linear reverse infinite;
+}
+.ast.ast2
+{
+    top: 40px;
+    right: 30px;
+    background-image: url('img/ast2.png');
+    animation:rotate 50s linear reverse infinite;
+}
+.ast.ast3
+{
+    top:210px;
+    left:160px;
+    background-image: url('img/ast3.png');
+    animation:rotate 40s linear reverse infinite;
+}
+.ast.ast4
+{ 
+    width: 180px;
+    height: 180px;
+    top: 250px;
+    right: 70px;
+    background-image: url('img/ast4.png');
+    background-size: contain;
+    animation: rotate 70s linear reverse infinite;
+}
+
+.ast.ast4 .blue
+{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    left: -60%;
+    transform-origin: 120% center;
+    animation: rotate 20s linear infinite;
+}
+
+.ast.ast4 .blue:before
+{ 
+    content: '';
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-image: url('img/blue.png');
+    background-position: 0;
+    background-size: cover;
+    animation: rotate 10s linear reverse infinite, blueSize 20s linear reverse infinite;
+}
+
+.screenshots img
+{
+    height: 300px;
+    width:auto;
+    margin: 0 auto;
+    border: 4px solid #e9e9e9;
+}
+
+.screenshots .my-gallery{
+    float: left;
+    width: 100%;
+     display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-around; /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+}
+
+.screenshots figcaption{
+    max-width: 195px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:16px;
+    font-family: "CaviarDreams";    
+    color:#fff;
+}
+
+.pswp__caption__center{
+    text-align: center;
+}
+
+.screenshot img.transition {
+    -webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.screenshot img {
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+}
+
+.screenshot .desc{
+    display: table;
+    /*float: left;*/
+    height:100%;
+    margin:0;
+    /*max-width:420px;
+    margin-left: 40px;*/
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.screenshot .desc .desc-text{
+    display: table-cell;
+    vertical-align: middle;
+    font-family: PaytoneOne;
+    font-size: 36px;
+}
+
+.section.footer{
+    position: relative;
+    color: #fcfcfc;
+}
+/*
+.section.footer::after{
+    content: "";
+    background-image: url('img/b.jpg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}*/
+
+.section.head .menu{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 20;
+    margin: 0;
+    background-color: rgba(11, 86, 174, 0.3); /*rgba(6, 10, 45,0.8);*/
+    border-bottom: 1px solid rgba(72, 145, 231, 0.18);
+}
+
+.section.head .menu ul{
+    display: table;
+    width: 960px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.section.head .menu ul li{
+    float: right;
+    margin:0;
+    padding:0 5px;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+}
+
+.section.head .menu ul li:hover{
+    background-color: rgba(20, 166, 250, 0.85);
+}
+
+.section.head .menu ul li a{
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: "CaviarDreams";
+    font-size: 24px;
+    color: #fcfcfc;
+}
+
+.section.head .menu ul li a.fb{
+    display: block;
+    height: 38px;
+    width: 38px;
+    padding:0;
+    font-weight: bold;
+}
+
+.section.footer .bhWrapper{
+    position: relative;
+    overflow: hidden;
+    /* left: 50%; */
+    height: 256px;
+    text-align: center;
+    /*background-image: url('img/Capture_.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -128px;
+    z-index: 2;*/
+}
+
+.section.footer .bhWrapper img{
+    position: absolute;    
+    left:0;
+    right:0;
+    margin: 0 auto;
+    /*
+    opacity:0.7;
+    filter:alpha(opacity=70);*/
+}
+
+.section.footer .bhWrapper img.circle
+{
+    height: 512px;
+    bottom: -256px;
+    z-index: 0;
+}
+
+.section.footer .bhWrapper img.bh{
+    width: 960px;
+    bottom: -232.5px;
+    animation: rotate 30s linear infinite;
+}
+
+.section.footer a{    
+    text-decoration: none;
+    padding: 0 10px;
+    color: #fcfcfc;
+}
+
+.section.footer a:hover
+{
+    color:#4BC545;
+}
+
+@keyframes rotate { 100% { transform:rotate(-360deg); } }
+@keyframes blueSize {   
+     0% { transform:scale(1.0); }   
+     25% { transform:scale(0.9); }  
+     50% { transform:scale(0.8); } 
+     75% { transform:scale(0.9); }      
+     100% { transform:scale(1.0); } 
+     }
+
+/* Larger than mobile */
+@media (min-width: 400px) and (orientation:portrait) {
+    .section.head
+    {
+        height: 700px;
+    }
+
+    .section.head .container{
+        height: 700px;
+    }
+    
+    .section.head .menu ul{
+        display: table;
+        width: 960px;
+        margin: 0 auto;
+        list-style-type: none;
+    }
+
+    .section.head .menu ul li a{
+        font-size: 32px;
+    }
+
+    .section.head .menu ul li a.fb{
+        height: 46px;
+        width: 46px;
+    }
+    
+    .section.trailer
+    {
+        height: 860px;
+    }
+    
+   .trailerWrapper
+    {       
+        width: 422.9px;
+        height: 860px;
+    }
+
+    .screenshots img{
+        height: 240px;
+    }    
+    
+    .screenshots figcaption {
+        max-width: 180px;
+    }   
+    
+    .redContainer
+    {
+        height:2566px;
+    }     
+    .pswp__caption__center{
+        font-size:20px;
+    }
+}
+
+/* Larger than phablet 
+@media (min-width: 550px) and (orientation:portrait) {
+    .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
+
+    .section.head{
+    min-height: 820px;
+    }
+
+    .section.head .container{
+    min-height: 820px;
+    }    
+}*/
+
+
+/* Larger than tablet 
+@media (min-width: 750px) and (orientation:portrait) {
+    .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
+    .section.head{
+    min-height: 820px;
+    }
+
+    .section.head .container{
+    min-height: 820px;
+    }
+}*/
+/*
+@media (min-width: 960px) and (orientation:portrait) {
+    
+    .section.head
+    {
+        height: 600px;
+    }
+
+    .section.head .container{
+        height: 600px;
+    }
+    
+   .trailerWrapper
+    {        
+        width: 422.9px;
+        height: 860px;
+    }
+
+    .screenshots img{
+        height: 240px;
+    }    
+    
+    .screenshots figcaption {
+        max-width: 180px;
+    }   
+    
+    .redContainer
+    {
+        height:2566px;
+    }  
+}*/
+
+@media (min-width: 960px) and (orientation:landscape) {  
+    .trailerWrapper
+    {        
+        height: 530px;
+    }
+    
+    .redContainer
+    {
+        height: 2302px;
+    }    
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {    
+    .section.trailer
+    {
+        height: 530px;
+    }
+}
+
+@font-face {
+    font-family: CaviarDreams;
+    src: url(fonts/CaviarDreams-webfont.ttf);
+}
+
+@font-face{
+    font-family: PaytoneOne;
+    src: url(fonts/PaytoneOne.ttf);    
+}
